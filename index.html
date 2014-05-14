@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Match That Tat</title>
+	<link type="text/css" href="css/tattoos.css" rel="stylesheet" />
+	
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+	<script src="js/tattoos.js"></script>
+</head>
+
+<body>
+	<!--FB STUFF-->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=278973778787146";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- END FB STUFF-->
+	
+
+	<div id="overallCon">
+
+		<!--DRAGGABLE THINGS-->
+		<div id="headCon" class="droppable2">
+			<div class="headcircle draggable" id="hbarrea"><img src="imgs/barrea.png" />Barea</div>
+			<div class="headcircle draggable" id="hbrewer"><img src="imgs/brewer.png" />Brewer</div>
+			<div class="headcircle draggable" id="hcunningham"><img src="imgs/cunningham.png" />Cunningham</div>
+			<div class="headcircle draggable" id="hjohnson"><img src="imgs/johnson.png" />Johnson</div>
+			<div class="headcircle draggable" id="hmartin"><img src="imgs/martin.png" />Martin</div>
+			<div class="headcircle draggable" id="hmuhammad"><img src="imgs/muhammad.png" />Muhammad</div>
+			<div class="headcircle draggable" id="hpekovic"><img src="imgs/pekovic.png" />Pekovic</div>
+			<div class="headcircle draggable" id="hrubio"><img src="imgs/rubio.png" />Rubio</div>
+			<div class="headcircle draggable" id="hturiaf"><img src="imgs/turiaf.png" />Turiaf</div>
+			<div class="headcircle draggable" id="hwilliams"><img src="imgs/williams.png" />Williams</div>
+		</div>
+		<!--END DRAGGABLE THINGS-->
+
+		<!--TWITTER AND FACEBOOK SHARING-->
+		<div id="shareCon">
+				<p class="congrats">Congratulations, you matched all 10!</p>
+				<p id="share">It took you 00 attempts to match them all. Share your score!</p>
+				<div><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.twincities.com/timberwolves/ci_24385647/minnesota-timberwolves-can-you-match-these-players-their" data-text="I just matched all 10 on @PioneerPress Match That Tat. Test your own tat knowledge.">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> </div>
+
+<div class="fb-like" data-href="http://www.twincities.com/timberwolves/ci_24385647/minnesota-timberwolves-can-you-match-these-players-their" data-width="100" data-height="20" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false"></div>
+
+		</div>
+		<!--END TWITTER AND FACEBOOK SHARING-->
+
+		<div id="scoreCon">
+			<div class="instruct">Drag the players on the left to their corresponding tattoos below.</div>
+			<div class="score">Correct: <span class="numDisp" id="numCorrect">0</span></div>
+			<div class="score">Attempts: <span class="numDisp" id="numAttempts">0</span></div>
+		</div>
+		
+		<div style="clear:both"></div>
+
+		<div id="detail">
+			<div id="detailCon">
+				<div id="closebtn">X</div>
+				<div id="photoCon"></div>
+				<div id="desc"></div>
+			</div>
+		</div>
+
+		<!--DROP TARGETS-->
+		<div id="tatCon">
+
+			<div class="atattoo droppable" id="tmuhammad" data-id="5">
+				<div class="messagewrong">Incorrect. <br/>Try Again.</div>
+				<div class="messageright">Correct</div>
+				<img src="imgs/muhammad.jpg" />
+				<div class="headcircleinside" id="muhammadinside"><img src="imgs/muhammad.png" />Muhammad</div>
+			</div>
+			
+			<div class="atattoo droppable" id="tbrewer" data-id="1">
+				<div class="messagewrong">Incorrect. <br/>Try Again.</div>
+				<div class="messageright">Correct</div>
+				<img src="imgs/brewer.jpg" />
+				<div class="headcircleinside" id="brewerinside"><img src="imgs/brewer.png" />Brewer</div>
+			</div>
+
+			<div class="atattoo droppable" id="tbarrea" data-id="0">
+				<div class="messagewrong">Incorrect. <br/>Try Again.</div>
+				<div class="messageright">Correct</div>
+				<img src="imgs/barrea.jpg" />
+				<div class="headcircleinside" id="barreainside"><img src="imgs/barrea.png" />Barea</div>
+			</div>
+
+			<div class="atattoo droppable" id="tcunningham" data-id="2">
+				<div class="messagewrong">Incorrect. <br/>Try Again.</div>
+				<div class="messageright">Correct</div>
+				<img src="imgs/cunningham.jpg" />
+				<div class="headcircleinside" id="cunninghaminside"><img src="imgs/cunningham.png" />Cunnigham</div>
+			</div>
+
+			<div class="atattoo droppable" id="tjohnson" data-id="3">
+				<div class="messagewrong">Incorrect. <br/>Try Again.</div>
+				<div class="messageright">Correct</div>
+				<img src="imgs/johnson.jpg" />
+				<div class="headcircleinside" id="johnsoninside"><img src="imgs/johnson.png" />Johnson</div>
+			</div>
+
+			<div class="atattoo droppable" id="twilliams" data-id="9">
+				<div class="messagewrong">Incorrect. <br/>Try Again.</div>
+				<div class="messageright">Correct</div>
+				<img src="imgs/williams.jpg" />
+				<div class="headcircleinside" id="williamsinside"><img src="imgs/williams.png" />Williams</div>
+			</div>
+			
+			<div class="atattoo droppable" id="tmartin" data-id="4">
+				<div class="messagewrong">Incorrect. <br/>Try Again.</div>
+				<div class="messageright">Correct</div>
+				<img src="imgs/martin.jpg" />
+				<div class="headcircleinside" id="martininside"><img src="imgs/martin.png" />Martin</div>
+			</div>
+			
+			<div class="atattoo droppable" id="tpekovic" data-id="6">
+				<div class="messagewrong">Incorrect. <br/>Try Again.</div>
+				<div class="messageright">Correct</div>
+				<img src="imgs/pekovic.jpg" />
+				<div class="headcircleinside" id="pekovicinside"><img src="imgs/pekovic.png" />Pekovic</div>
+			</div>
+			
+			<div class="atattoo droppable" id="tturiaf" data-id="8">
+				<div class="messagewrong">Incorrect. <br/>Try Again.</div>
+				<div class="messageright">Correct</div>
+				<img src="imgs/turiaf.jpg" />
+				<div class="headcircleinside" id="turiafinside"><img src="imgs/turiaf.png" />Turiaf</div>
+			</div>
+
+			<div class="atattoo droppable" id="trubio" data-id="7">
+				<div class="messagewrong">Incorrect. <br/>Try Again.</div>
+				<div class="messageright">Correct</div>
+				<img src="imgs/rubio.jpg" />
+				<div class="headcircleinside" id="rubioinside"><img src="imgs/rubio.png" />Rubio</div>
+			</div>
+			
+			
+		</div>
+		<!--END DROP TARGETS-->
+
+	</div>
+
+	<div class="credits-con">
+    	Credits: Nelson Hsu / DFM; Photos by Ben Garvin / Pioneer Press
+    </div>
+
+    <!--analytics-->
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-37303540-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+
+</body>
+
+</html>

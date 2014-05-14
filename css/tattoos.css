@@ -1,0 +1,103 @@
+#overallCon { width: 620px; }
+#headCon { width: 430px; height: 190px; float: left; border-right: 1px dotted #CCC; background: url('../imgs/circlebgs.gif') no-repeat; }
+#scoreCon { width: 170px; height: 100px; float: right; }
+#tatCon { margin: 20px 0 0 0 ;}
+
+.headcircle { 
+	width: 70px;
+	font: 12px Arial;
+	text-align: center;
+	color: #666;
+	float: left;
+	margin: 0 15px 10px 0;
+	cursor: pointer;
+}
+.headcircle img { margin-bottom: -4px; }
+
+.headcircleinside {
+	width: 70px;
+	font: 11px Arial;
+	text-align: center;
+	color: #FFF;
+	float: left;
+	margin: -70px 0 0 -5px;
+	position: absolute;
+	display: none;
+	text-shadow: 0 0 0.2em #000, 0 0 0.2em #000;
+	cursor: pointer;
+}
+.headcircleinside img { margin-bottom: -4px; width: 50px; }
+
+.atattoo { float: left; margin-right: 3px; }
+
+.messagewrong { position: absolute; margin: 5px; font: bold 16px Arial; color: #CC0000; text-shadow: 0 0 0.2em #FFF, 0 0 0.2em #FFF; display: none;}
+.messageright { position: absolute; margin: 5px; font: bold 16px Arial; color: #339933; text-shadow: 0 0 0.2em #FFF, 0 0 0.2em #FFF; display: none;}
+
+.instruct { font: 14px Arial; color: #666; margin-bottom: 20px;}
+.score { font: bold 18px Arial; margin-bottom: 5px; color: #666 }
+.numDisp { font: 18px Arial; color: #333; }
+
+.boxHover { opacity: .66; }
+
+#detail { 
+	height: 450px; 
+	width: 100%; 
+	background-color: rgba(255, 255, 255, .75);
+	position: absolute; 
+	top: 190px; 
+	display: none;
+	z-index: 100;
+	opacity: 0;
+}
+
+#detail #detailCon {
+	width: 445px;
+	height: 350px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	-moz-box-shadow: 0 0 15px #999;
+	-webkit-box-shadow: 0 0 15px #999;
+	box-shadow: 0 0 15px #999;
+	top: 40px;
+	left: 70px;
+	padding: 15px;
+	position: relative;
+}
+
+#photoCon {
+	width: 250px;
+	height: 350px;
+	background-color: #000;
+	float: left;
+	margin-right: 20px;
+}
+
+#detail #closebtn {
+	font: bold 12px Arial, Sans Serif;
+	float: right;
+	color: #999;
+	border: 1px solid #CCC;
+	padding: 0 2px 0 2px;
+	cursor: pointer;
+}
+
+#desc { font: 14px Arial; margin-top: 25px; color: #666; padding-right: 20px; }
+
+.credits-con { font: italic 11px Arial; color: #999; clear:both; padding-top: 10px; } 
+
+#shareCon {
+	font: 14px Arial;
+	
+	padding-top: 10px; 
+	padding-left: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #FFF;
+	width: 410px;
+	height: 190px
+}
+
+.congrats { font: bold 18px Arial; margin-bottom: 0px }
+
+

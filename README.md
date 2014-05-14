@@ -4,7 +4,8 @@ tattoo-match-game
 What is this?
 -------------
 
-A drag-and-drop match game
+A drag-and-drop match game.
+Demo: http://www.twincities.com/timberwolves/ci_24385647/minnesota-timberwolves-match-players-their-tattoos
 
 Credits
 ---------
